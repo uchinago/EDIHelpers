@@ -1,0 +1,14 @@
+C:\Projects\EDIHelpers\EDIDocuments\obj\Debug\EDIDocuments.csprojResolveAssemblyReference.cache
+C:\Projects\EDIHelpers\EDIDocuments\bin\Debug\EDIDocuments.dll
+C:\Projects\EDIHelpers\EDIDocuments\bin\Debug\EDIDocuments.pdb
+C:\Projects\EDIHelpers\EDIDocuments\bin\Debug\EDIHelpers.dll
+C:\Projects\EDIHelpers\EDIDocuments\bin\Debug\EDIHelpers.pdb
+C:\Projects\EDIHelpers\EDIDocuments\obj\Debug\EDIDocuments.dll
+C:\Projects\EDIHelpers\EDIDocuments\obj\Debug\EDIDocuments.pdb
+C:\Users\uchinago\Documents\GitHub\EDIHelpers\EDIHelpers\EDIDocuments\bin\Debug\EDIDocuments.dll
+C:\Users\uchinago\Documents\GitHub\EDIHelpers\EDIHelpers\EDIDocuments\bin\Debug\EDIDocuments.pdb
+C:\Users\uchinago\Documents\GitHub\EDIHelpers\EDIHelpers\EDIDocuments\bin\Debug\EDIHelpers.dll
+C:\Users\uchinago\Documents\GitHub\EDIHelpers\EDIHelpers\EDIDocuments\bin\Debug\EDIHelpers.pdb
+C:\Users\uchinago\Documents\GitHub\EDIHelpers\EDIHelpers\EDIDocuments\obj\Debug\EDIDocuments.csprojResolveAssemblyReference.cache
+C:\Users\uchinago\Documents\GitHub\EDIHelpers\EDIHelpers\EDIDocuments\obj\Debug\EDIDocuments.dll
+C:\Users\uchinago\Documents\GitHub\EDIHelpers\EDIHelpers\EDIDocuments\obj\Debug\EDIDocuments.pdb

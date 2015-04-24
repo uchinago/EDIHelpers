@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{59BA55F8-3BEA-4152-8D2A-AA5E2D4BC8B4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EDIDocuments</RootNamespace>
+    <AssemblyName>EDIDocuments</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ANSI\EDI834.cs" />
+    <Compile Include="ANSI\EDI835.cs" />
+    <Compile Include="ANSI\Loops\Loop1000.cs" />
+    <Compile Include="ANSI\Loops\Loop2100.cs" />
+    <Compile Include="ANSI\Loops\Loop2120.cs" />
+    <Compile Include="ANSI\Loops\LoopPaperwork.cs" />
+    <Compile Include="ANSI\Loops\LoopNM1Basic.cs" />
+    <Compile Include="ANSI\EDI270.cs" />
+    <Compile Include="ANSI\X12_270\GS270.cs" />
+    <Compile Include="ANSI\X12_270\Loop2000.cs" />
+    <Compile Include="ANSI\X12_270\Loop2100.cs" />
+    <Compile Include="ANSI\X12_270\Loop2110.cs" />
+    <Compile Include="ANSI\X12_270\ST270.cs" />
+    <Compile Include="ANSI\EDI271.cs" />
+    <Compile Include="ANSI\X12_271\GS271.cs" />
+    <Compile Include="ANSI\X12_271\Loop2000.cs" />
+    <Compile Include="ANSI\X12_271\Loop2100.cs" />
+    <Compile Include="ANSI\X12_271\Loop2110.cs" />
+    <Compile Include="ANSI\X12_271\Loop2115.cs" />
+    <Compile Include="ANSI\X12_271\Loop2117.cs" />
+    <Compile Include="ANSI\X12_271\LoopLS.cs" />
+    <Compile Include="ANSI\X12_271\ST271.cs" />
+    <Compile Include="ANSI\EDI276.cs" />
+    <Compile Include="ANSI\X12_276\GS276.cs" />
+    <Compile Include="ANSI\X12_276\Loop2000.cs" />
+    <Compile Include="ANSI\X12_276\Loop2200.cs" />
+    <Compile Include="ANSI\X12_276\Loop2210.cs" />
+    <Compile Include="ANSI\X12_276\ST276.cs" />
+    <Compile Include="ANSI\X12_277\Loop2220.cs" />
+    <Compile Include="ANSI\EDI277.cs" />
+    <Compile Include="ANSI\X12_277\GS277.cs" />
+    <Compile Include="ANSI\X12_277\Loop2000.cs" />
+    <Compile Include="ANSI\X12_277\Loop2200.cs" />
+    <Compile Include="ANSI\X12_277\LoopLS.cs" />
+    <Compile Include="ANSI\X12_277\ST277.cs" />
+    <Compile Include="ANSI\EDI278.cs" />
+    <Compile Include="ANSI\X12_278\GS278.cs" />
+    <Compile Include="ANSI\X12_278\HL278.cs" />
+    <Compile Include="ANSI\X12_278\LoopName278.cs" />
+    <Compile Include="ANSI\X12_278\ST278.cs" />
+    <Compile Include="ANSI\EDI837.cs" />
+    <Compile Include="ANSI\X12_810\GS810.cs" />
+    <Compile Include="ANSI\X12_810\LoopN1.cs" />
+    <Compile Include="ANSI\X12_810\LoopN9.cs" />
+    <Compile Include="ANSI\X12_810\LoopPO1.cs" />
+    <Compile Include="ANSI\X12_810\ST810.cs" />
+    <Compile Include="ANSI\X12_834\GS834.cs" />
+    <Compile Include="ANSI\X12_834\Loop1000PartyID.cs" />
+    <Compile Include="ANSI\X12_834\Loop1100AccountID.cs" />
+    <Compile Include="ANSI\X12_834\Loop2000InsuredBenefit.cs" />
+    <Compile Include="ANSI\X12_834\Loop2100Name.cs" />
+    <Compile Include="ANSI\X12_834\Loop2200Disability.cs" />
+    <Compile Include="ANSI\X12_834\Loop2300HealthCoverage.cs" />
+    <Compile Include="ANSI\X12_834\Loop2400LifeCoverage.cs" />
+    <Compile Include="ANSI\X12_834\Loop2500FSA.cs" />
+    <Compile Include="ANSI\X12_834\Loop2600RetirementProduct.cs" />
+    <Compile Include="ANSI\X12_834\LoopLS834.cs" />
+    <Compile Include="ANSI\X12_834\ST834.cs" />
+    <Compile Include="ANSI\X12_835\GS835.cs" />
+    <Compile Include="ANSI\X12_835\Loop1000PartyID.cs" />
+    <Compile Include="ANSI\X12_835\Loop2000TransactionSet.cs" />
+    <Compile Include="ANSI\X12_835\ST835.cs" />
+    <Compile Include="ANSI\X12_837\GS837.cs" />
+    <Compile Include="ANSI\X12_837\Loop2000.cs" />
+    <Compile Include="ANSI\X12_837\Loop2010.cs" />
+    <Compile Include="ANSI\X12_837\Loop2300.cs" />
+    <Compile Include="ANSI\X12_837\Loop2305.cs" />
+    <Compile Include="ANSI\X12_837\Loop2320.cs" />
+    <Compile Include="ANSI\X12_837\Loop2330.cs" />
+    <Compile Include="ANSI\X12_837\Loop2400.cs" />
+    <Compile Include="ANSI\X12_837\Loop2410.cs" />
+    <Compile Include="ANSI\X12_837\Loop2430.cs" />
+    <Compile Include="ANSI\X12_837\Loop2440.cs" />
+    <Compile Include="ANSI\X12_837\LoopLS.cs" />
+    <Compile Include="ANSI\X12_837\ST837.cs" />
+    <Compile Include="Vendor\BassProShop\VICS810.cs" />
+    <Compile Include="Vendor\BassProShop\VICS856.cs" />
+    <Compile Include="Vendor\BassProShop\X810\GS810.cs" />
+    <Compile Include="Vendor\BassProShop\X810\LoopIT1.cs" />
+    <Compile Include="Vendor\BassProShop\X810\LoopN1.cs" />
+    <Compile Include="Vendor\BassProShop\X810\ST810.cs" />
+    <Compile Include="Vendor\BassProShop\X850\GS850.cs" />
+    <Compile Include="Vendor\BassProShop\X850\LoopN1.cs" />
+    <Compile Include="Vendor\BassProShop\X850\LoopN9.cs" />
+    <Compile Include="Vendor\BassProShop\X850\LoopPO1.cs" />
+    <Compile Include="Vendor\BassProShop\X850\ST850.cs" />
+    <Compile Include="Vendor\BassProShop\X856\GS856.cs" />
+    <Compile Include="Vendor\BassProShop\X856\LoopItem.cs" />
+    <Compile Include="Vendor\BassProShop\X856\LoopOrder.cs" />
+    <Compile Include="Vendor\BassProShop\X856\LoopPack.cs" />
+    <Compile Include="Vendor\BassProShop\X856\LoopShipment.cs" />
+    <Compile Include="Vendor\BassProShop\X856\ST856.cs" />
+    <Compile Include="Vendor\Cabelas\X810\GS810.cs" />
+    <Compile Include="Vendor\Cabelas\X810\LoopIT1.cs" />
+    <Compile Include="Vendor\Cabelas\X810\LoopN1.cs" />
+    <Compile Include="Vendor\Cabelas\X810\ST810.cs" />
+    <Compile Include="Vendor\Cabelas\X850\Class1.cs" />
+    <Compile Include="Vendor\Cabelas\X850\GS850.cs" />
+    <Compile Include="Vendor\Cabelas\X850\LoopN1.cs" />
+    <Compile Include="Vendor\Cabelas\X850\LoopN9.cs" />
+    <Compile Include="Vendor\Cabelas\X850\LoopPO1.cs" />
+    <Compile Include="Vendor\Cabelas\X850\ST850.cs" />
+    <Compile Include="HIPAA\HIPAA834.cs" />
+    <Compile Include="HIPAA\HIPAA835.cs" />
+    <Compile Include="HIPAA\HIPAA837.cs" />
+    <Compile Include="HIPAA\X270\Group270.cs" />
+    <Compile Include="HIPAA\X270\Source270.cs" />
+    <Compile Include="HIPAA\X270\Receiver270.cs" />
+    <Compile Include="HIPAA\X270\Subscriber270.cs" />
+    <Compile Include="HIPAA\X270\Dependent270.cs" />
+    <Compile Include="HIPAA\HIPAA270.cs" />
+    <Compile Include="HIPAA\X270\Transaction270.cs" />
+    <Compile Include="HIPAA\X271\Group271.cs" />
+    <Compile Include="HIPAA\X271\Source271.cs" />
+    <Compile Include="HIPAA\X271\Receiver271.cs" />
+    <Compile Include="HIPAA\X271\Subscriber271.cs" />
+    <Compile Include="HIPAA\X271\Dependent271.cs" />
+    <Compile Include="HIPAA\HIPAA271.cs" />
+    <Compile Include="HIPAA\X271\Benefits271.cs" />
+    <Compile Include="HIPAA\X271\Transaction271.cs" />
+    <Compile Include="HIPAA\X276\Dependent276.cs" />
+    <Compile Include="HIPAA\X276\Group276.cs" />
+    <Compile Include="HIPAA\X276\LoopInfoSource276.cs" />
+    <Compile Include="HIPAA\X276\LoopInfoReceiver276.cs" />
+    <Compile Include="HIPAA\X276\LoopServiceProvider.cs" />
+    <Compile Include="HIPAA\X276\Subscriber276.cs" />
+    <Compile Include="HIPAA\HIPAA276.cs" />
+    <Compile Include="HIPAA\X276\LoopClaimStatusTracking.cs" />
+    <Compile Include="HIPAA\X276\LoopServiceLineInfo.cs" />
+    <Compile Include="HIPAA\X276\Transaction276.cs" />
+    <Compile Include="HIPAA\X277\Dependent277.cs" />
+    <Compile Include="HIPAA\X277\Group277.cs" />
+    <Compile Include="HIPAA\HIPAA277.cs" />
+    <Compile Include="HIPAA\X277\LoopClaimStatusTracking.cs" />
+    <Compile Include="HIPAA\X277\LoopInfoReceiver277.cs" />
+    <Compile Include="HIPAA\X277\LoopInfoSource277.cs" />
+    <Compile Include="HIPAA\X277\LoopServiceLineInfo.cs" />
+    <Compile Include="HIPAA\X277\LoopServiceProvider.cs" />
+    <Compile Include="HIPAA\X277\Subscriber277.cs" />
+    <Compile Include="HIPAA\X277\Transaction277.cs" />
+    <Compile Include="HIPAA\X834\Group834.cs" />
+    <Compile Include="HIPAA\X834\Loop1000PartyID.cs" />
+    <Compile Include="HIPAA\X834\Loop2000MemberLevel.cs" />
+    <Compile Include="HIPAA\X834\Loop2100Name.cs" />
+    <Compile Include="HIPAA\X834\Loop2200Disability.cs" />
+    <Compile Include="HIPAA\X834\Loop2300HealthCoverage.cs" />
+    <Compile Include="HIPAA\X834\Loop2400LifeCoverage.cs" />
+    <Compile Include="HIPAA\X834\Loop2500FSA.cs" />
+    <Compile Include="HIPAA\X834\Loop2600RetirementProduct.cs" />
+    <Compile Include="HIPAA\X834\LoopLS834.cs" />
+    <Compile Include="HIPAA\X834\ST834.cs" />
+    <Compile Include="HIPAA\X835\Group835.cs" />
+    <Compile Include="HIPAA\X835\Loop1000PartyID.cs" />
+    <Compile Include="HIPAA\X835\Loop2000TransactionSet.cs" />
+    <Compile Include="HIPAA\X835\ST835.cs" />
+    <Compile Include="HIPAA\X837\Group837.cs" />
+    <Compile Include="HIPAA\X837\Loop2010Simple.cs" />
+    <Compile Include="HIPAA\X837\Loop2300Claim.cs" />
+    <Compile Include="HIPAA\X837\Loop2400Line.cs" />
+    <Compile Include="HIPAA\X837\LoopBilling.cs" />
+    <Compile Include="HIPAA\X837\LoopDependent.cs" />
+    <Compile Include="HIPAA\X837\LoopPatient.cs" />
+    <Compile Include="HIPAA\X837\LoopSubscriber.cs" />
+    <Compile Include="HIPAA\X837\ST837.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transformation\ClaimStatus.cs" />
+    <Compile Include="Transformation\DataScrubbing.cs" />
+    <Compile Include="Transformation\Eligibility.cs" />
+    <Compile Include="Vendor\BassProShop\VICS850.cs" />
+    <Compile Include="Vendor\Cabelas\X856\GS856.cs" />
+    <Compile Include="Vendor\Cabelas\X856\LoopItem.cs" />
+    <Compile Include="Vendor\Cabelas\X856\LoopName.cs" />
+    <Compile Include="Vendor\Cabelas\X856\LoopOrder.cs" />
+    <Compile Include="Vendor\Cabelas\X856\LoopPack.cs" />
+    <Compile Include="Vendor\Cabelas\X856\LoopShipment.cs" />
+    <Compile Include="Vendor\Cabelas\X856\ST856.cs" />
+    <Compile Include="Vendor\Sportsmans\X810\GS810.cs" />
+    <Compile Include="Vendor\Sportsmans\X810\LoopIT1.cs" />
+    <Compile Include="Vendor\Sportsmans\X810\LoopN1.cs" />
+    <Compile Include="Vendor\Sportsmans\X810\ST810.cs" />
+    <Compile Include="Vendor\Sportsmans\X850\Class1.cs" />
+    <Compile Include="Vendor\Sportsmans\X850\GS850.cs" />
+    <Compile Include="Vendor\Sportsmans\X850\LoopN1.cs" />
+    <Compile Include="Vendor\Sportsmans\X850\LoopN9.cs" />
+    <Compile Include="Vendor\Sportsmans\X850\LoopPO1.cs" />
+    <Compile Include="Vendor\Sportsmans\X850\ST850.cs" />
+    <Compile Include="Vendor\Sportsmans\X856\GS856.cs" />
+    <Compile Include="Vendor\Sportsmans\X856\LoopItem.cs" />
+    <Compile Include="Vendor\Sportsmans\X856\LoopName.cs" />
+    <Compile Include="Vendor\Sportsmans\X856\LoopOrder.cs" />
+    <Compile Include="Vendor\Sportsmans\X856\LoopPack.cs" />
+    <Compile Include="Vendor\Sportsmans\X856\LoopShipment.cs" />
+    <Compile Include="Vendor\Sportsmans\X856\ST856.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ANSI\X12_850\" />
+    <Folder Include="ANSI\X12_856\" />
+    <Folder Include="HIPAA\X278\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EDIHelpers\EDIHelpers.csproj">
+      <Project>{10edefe4-2aa1-4f61-a21a-749edac0d5fb}</Project>
+      <Name>EDIHelpers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

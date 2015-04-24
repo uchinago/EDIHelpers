@@ -1,0 +1,10 @@
+C:\Projects\EDIHelpers\EDIHelpers\bin\Debug\EDIHelpers.dll
+C:\Projects\EDIHelpers\EDIHelpers\bin\Debug\EDIHelpers.pdb
+C:\Projects\EDIHelpers\EDIHelpers\obj\Debug\EDIHelpers.dll
+C:\Projects\EDIHelpers\EDIHelpers\obj\Debug\EDIHelpers.pdb
+C:\Projects\EDIHelpers\EDIHelpers\obj\Debug\EDIHelpers.csprojResolveAssemblyReference.cache
+C:\Users\uchinago\Documents\GitHub\EDIHelpers\EDIHelpers\EDIHelpers\bin\Debug\EDIHelpers.dll
+C:\Users\uchinago\Documents\GitHub\EDIHelpers\EDIHelpers\EDIHelpers\bin\Debug\EDIHelpers.pdb
+C:\Users\uchinago\Documents\GitHub\EDIHelpers\EDIHelpers\EDIHelpers\obj\Debug\EDIHelpers.csprojResolveAssemblyReference.cache
+C:\Users\uchinago\Documents\GitHub\EDIHelpers\EDIHelpers\EDIHelpers\obj\Debug\EDIHelpers.dll
+C:\Users\uchinago\Documents\GitHub\EDIHelpers\EDIHelpers\EDIHelpers\obj\Debug\EDIHelpers.pdb

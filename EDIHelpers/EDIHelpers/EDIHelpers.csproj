@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{10EDEFE4-2AA1-4F61-A21A-749EDAC0D5FB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EDIHelpers</RootNamespace>
+    <AssemblyName>EDIHelpers</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Acks\Ack997.cs" />
+    <Compile Include="Acks\X12_997\GS997.cs" />
+    <Compile Include="Acks\X12_997\LoopAK2.cs" />
+    <Compile Include="Acks\X12_997\LoopAK3.cs" />
+    <Compile Include="Acks\X12_997\ST997.cs" />
+    <Compile Include="Attributes\AttributeExtensions.cs" />
+    <Compile Include="Attributes\ConditionalRecordAttribute.cs" />
+    <Compile Include="Attributes\DelimitedRecordAttribute.cs" />
+    <Compile Include="Attributes\EDIFixedLen.cs" />
+    <Compile Include="Attributes\EDIFormat.cs" />
+    <Compile Include="Attributes\EDILength.cs" />
+    <Compile Include="Attributes\EDILoop.cs" />
+    <Compile Include="Attributes\FieldAlignAttribute.cs" />
+    <Compile Include="Attributes\FieldAttribute.cs" />
+    <Compile Include="Attributes\FieldConverterAttribute.cs" />
+    <Compile Include="Attributes\FieldDelimiterAttribute.cs" />
+    <Compile Include="Attributes\FieldFixedLengthAttribute.cs" />
+    <Compile Include="Attributes\FieldIgnoredAttribute.cs" />
+    <Compile Include="Attributes\FieldInNewLineAttribute.cs" />
+    <Compile Include="Attributes\FieldNullValueAttribute.cs" />
+    <Compile Include="Attributes\FieldOptionalAttribute.cs" />
+    <Compile Include="Attributes\FieldQuotedAttribute.cs" />
+    <Compile Include="Attributes\FieldTrimAttribute.cs" />
+    <Compile Include="Attributes\FixedLengthRecordAttribute.cs" />
+    <Compile Include="Attributes\IgnoreCommentedLinesAttribute.cs" />
+    <Compile Include="Attributes\IgnoreEmptyLinesAttribute.cs" />
+    <Compile Include="Attributes\IgnoreFirstAttribute.cs" />
+    <Compile Include="Attributes\IgnoreLastAttribute.cs" />
+    <Compile Include="Attributes\TransformToRecordAttribute.cs" />
+    <Compile Include="Attributes\TypedRecordAttribute.cs" />
+    <Compile Include="Converters\ConverterBase.cs" />
+    <Compile Include="Converters\ConvertHelpers.cs" />
+    <Compile Include="Converters\EDIConverter.cs" />
+    <Compile Include="Converters\EnumConverter.cs" />
+    <Compile Include="Converters\GenderConverter.cs" />
+    <Compile Include="Converters\TimeConverter.cs" />
+    <Compile Include="Converters\YesNoConverter.cs" />
+    <Compile Include="Core\ExtractInfo.cs" />
+    <Compile Include="Core\ForwardReader.cs" />
+    <Compile Include="Core\LineInfo.cs" />
+    <Compile Include="DataTypes\DateString.cs" />
+    <Compile Include="Dictionary\BXExtension.cs" />
+    <Compile Include="Dictionary\Composites\C001_UOM.cs" />
+    <Compile Include="Dictionary\Composites\C002_Actions.cs" />
+    <Compile Include="Dictionary\Composites\C003_MedicalProc.cs" />
+    <Compile Include="Dictionary\Composites\C004_DiagnosisPointer.cs" />
+    <Compile Include="Dictionary\Composites\C005_ToothSurface.cs" />
+    <Compile Include="Dictionary\Composites\C022_HealthCodeInfo.cs" />
+    <Compile Include="Dictionary\Composites\C023_ServiceLocation.cs" />
+    <Compile Include="Dictionary\Composites\C024_RelatedCauses.cs" />
+    <Compile Include="Dictionary\Composites\C030_Position.cs" />
+    <Compile Include="Dictionary\Composites\C040_Reference.cs" />
+    <Compile Include="Dictionary\Composites\C042_AdjustmentID.cs" />
+    <Compile Include="Dictionary\Composites\C043_ClaimStatus.cs" />
+    <Compile Include="Dictionary\Composites\C052_StatusCodes.cs" />
+    <Compile Include="Dictionary\Composites\C056_RaceInfo.cs" />
+    <Compile Include="Dictionary\Composites\CO35_SpecialtyInfo.cs" />
+    <Compile Include="Dictionary\Composites\CompositeBase.cs" />
+    <Compile Include="Dictionary\Composites\C006_OralCavity.cs" />
+    <Compile Include="Dictionary\EDIBase.cs" />
+    <Compile Include="Dictionary\Elements.cs" />
+    <Compile Include="Dictionary\Segments\A\AAA.cs" />
+    <Compile Include="Dictionary\Segments\A\ACT.cs" />
+    <Compile Include="Dictionary\Segments\A\AD1.cs" />
+    <Compile Include="Dictionary\Segments\A\AIN.cs" />
+    <Compile Include="Dictionary\Segments\A\AK1.cs" />
+    <Compile Include="Dictionary\Segments\A\AK2.cs" />
+    <Compile Include="Dictionary\Segments\A\AK3.cs" />
+    <Compile Include="Dictionary\Segments\A\AK4.cs" />
+    <Compile Include="Dictionary\Segments\A\AK5.cs" />
+    <Compile Include="Dictionary\Segments\A\AK9.cs" />
+    <Compile Include="Dictionary\Segments\A\AMT.cs" />
+    <Compile Include="Dictionary\Segments\B\BEG.cs" />
+    <Compile Include="Dictionary\Segments\B\BEN.cs" />
+    <Compile Include="Dictionary\Segments\B\BGN.cs" />
+    <Compile Include="Dictionary\Segments\B\BHT.cs" />
+    <Compile Include="Dictionary\Segments\B\BIG.cs" />
+    <Compile Include="Dictionary\Segments\B\BSN.cs" />
+    <Compile Include="Dictionary\Segments\C\CAD.cs" />
+    <Compile Include="Dictionary\Segments\C\COB.cs" />
+    <Compile Include="Dictionary\Segments\C\CTB.cs" />
+    <Compile Include="Dictionary\Segments\C\CTT.cs" />
+    <Compile Include="Dictionary\Segments\D\DTM.cs" />
+    <Compile Include="Dictionary\Segments\C\CR7.cs" />
+    <Compile Include="Dictionary\Segments\D\DMG.cs" />
+    <Compile Include="Dictionary\Segments\D\DSB.cs" />
+    <Compile Include="Dictionary\Segments\D\DTP.cs" />
+    <Compile Include="Dictionary\Segments\C\CR1.cs" />
+    <Compile Include="Dictionary\Segments\C\CR2.cs" />
+    <Compile Include="Dictionary\Segments\C\CR3.cs" />
+    <Compile Include="Dictionary\Segments\C\CR4.cs" />
+    <Compile Include="Dictionary\Segments\C\CR5.cs" />
+    <Compile Include="Dictionary\Segments\C\CRC.cs" />
+    <Compile Include="Dictionary\Segments\C\CAS.cs" />
+    <Compile Include="Dictionary\Segments\C\CTP.cs" />
+    <Compile Include="Dictionary\Segments\C\CLM.cs" />
+    <Compile Include="Dictionary\Segments\C\CL1.cs" />
+    <Compile Include="Dictionary\Segments\C\CN1.cs" />
+    <Compile Include="Dictionary\Segments\C\CR6.cs" />
+    <Compile Include="Dictionary\Segments\C\CR8.cs" />
+    <Compile Include="Dictionary\Segments\D\DN1.cs" />
+    <Compile Include="Dictionary\Segments\D\DN2.cs" />
+    <Compile Include="Dictionary\Segments\B\BPR.cs" />
+    <Compile Include="Dictionary\Segments\C\CLP.cs" />
+    <Compile Include="Dictionary\Segments\C\CUR.cs" />
+    <Compile Include="Dictionary\Segments\M\MAN.cs" />
+    <Compile Include="Dictionary\Segments\M\MTX.cs" />
+    <Compile Include="Dictionary\Segments\N\N9.cs" />
+    <Compile Include="Dictionary\Segments\I\ITD.cs" />
+    <Compile Include="Dictionary\Segments\F\FOB.cs" />
+    <Compile Include="Dictionary\Segments\I\IT1.cs" />
+    <Compile Include="Dictionary\Segments\P\PAL.cs" />
+    <Compile Include="Dictionary\Segments\P\PID.cs" />
+    <Compile Include="Dictionary\Segments\P\PO1.cs" />
+    <Compile Include="Dictionary\Segments\P\PO4.cs" />
+    <Compile Include="Dictionary\Segments\P\PRFSeg.cs" />
+    <Compile Include="Dictionary\Segments\S\SCH.cs" />
+    <Compile Include="Dictionary\Segments\S\SDQ.cs" />
+    <Compile Include="Dictionary\Segments\S\SLN.cs" />
+    <Compile Include="Dictionary\Segments\S\SN1.cs" />
+    <Compile Include="Dictionary\Segments\T\TD1.cs" />
+    <Compile Include="Dictionary\Segments\T\TD3.cs" />
+    <Compile Include="Dictionary\Segments\T\TD4.cs" />
+    <Compile Include="Dictionary\Segments\T\TD5.cs" />
+    <Compile Include="Dictionary\Segments\S\SAC.cs" />
+    <Compile Include="Dictionary\Segments\E\EC.cs" />
+    <Compile Include="Dictionary\Segments\E\ENT.cs" />
+    <Compile Include="Dictionary\Segments\F\FC.cs" />
+    <Compile Include="Dictionary\Segments\F\FSA.cs" />
+    <Compile Include="Dictionary\Segments\H\HCR.cs" />
+    <Compile Include="Dictionary\Segments\H\HD.cs" />
+    <Compile Include="Dictionary\Segments\H\HLH.cs" />
+    <Compile Include="Dictionary\Segments\I\ICM.cs" />
+    <Compile Include="Dictionary\Segments\I\IDC.cs" />
+    <Compile Include="Dictionary\Segments\I\INV.cs" />
+    <Compile Include="Dictionary\Segments\L\LC.cs" />
+    <Compile Include="Dictionary\Segments\L\LUI.cs" />
+    <Compile Include="Dictionary\Segments\N\N1.cs" />
+    <Compile Include="Dictionary\Segments\M\MIA.cs" />
+    <Compile Include="Dictionary\Segments\M\MOA.cs" />
+    <Compile Include="Dictionary\Segments\N\NX1.cs" />
+    <Compile Include="Dictionary\Segments\O\OI.cs" />
+    <Compile Include="Dictionary\Segments\H\HCP.cs" />
+    <Compile Include="Dictionary\Segments\E\EB.cs" />
+    <Compile Include="Dictionary\Segments\E\EQ.cs" />
+    <Compile Include="Dictionary\Segments\G\GE.cs" />
+    <Compile Include="Dictionary\Segments\G\GS.cs" />
+    <Compile Include="Dictionary\Segments\H\HI.cs" />
+    <Compile Include="Dictionary\Segments\H\HL.cs" />
+    <Compile Include="Dictionary\Segments\H\HSD.cs" />
+    <Compile Include="Dictionary\Segments\F\FRM.cs" />
+    <Compile Include="Dictionary\Segments\I\IEA.cs" />
+    <Compile Include="Dictionary\Segments\I\III.cs" />
+    <Compile Include="Dictionary\Segments\I\INS.cs" />
+    <Compile Include="Dictionary\Segments\I\ISA.cs" />
+    <Compile Include="Dictionary\Segments\L\LE.cs" />
+    <Compile Include="Dictionary\Segments\L\LIN.cs" />
+    <Compile Include="Dictionary\Segments\L\LQ.cs" />
+    <Compile Include="Dictionary\Segments\L\LS.cs" />
+    <Compile Include="Dictionary\Segments\L\LX.cs" />
+    <Compile Include="Dictionary\Segments\K\K3.cs" />
+    <Compile Include="Dictionary\Segments\M\MSG.cs" />
+    <Compile Include="Dictionary\Segments\N\N2.cs" />
+    <Compile Include="Dictionary\Segments\N\N3.cs" />
+    <Compile Include="Dictionary\Segments\N\N4.cs" />
+    <Compile Include="Dictionary\Segments\N\NM1.cs" />
+    <Compile Include="Dictionary\Segments\N\NTE.cs" />
+    <Compile Include="Dictionary\Segments\M\MEA.cs" />
+    <Compile Include="Dictionary\Segments\P\PAT.cs" />
+    <Compile Include="Dictionary\Segments\P\PCT.cs" />
+    <Compile Include="Dictionary\Segments\P\PER.cs" />
+    <Compile Include="Dictionary\Segments\P\PLA.cs" />
+    <Compile Include="Dictionary\Segments\P\PM.cs" />
+    <Compile Include="Dictionary\Segments\P\PRV.cs" />
+    <Compile Include="Dictionary\Segments\P\PS1Seg.cs" />
+    <Compile Include="Dictionary\Segments\R\REF.cs" />
+    <Compile Include="Dictionary\Segments\P\PWK.cs" />
+    <Compile Include="Dictionary\Segments\R\REL.cs" />
+    <Compile Include="Dictionary\Segments\R\RP.cs" />
+    <Compile Include="Dictionary\Segments\P\PLB.cs" />
+    <Compile Include="Dictionary\Segments\R\RDM.cs" />
+    <Compile Include="Dictionary\Segments\Q\QTY.cs" />
+    <Compile Include="Dictionary\Segments\S\SV7.cs" />
+    <Compile Include="Dictionary\Segments\S\SV6.cs" />
+    <Compile Include="Dictionary\Segments\S\SV5.cs" />
+    <Compile Include="Dictionary\Segments\S\SV4.cs" />
+    <Compile Include="Dictionary\Segments\S\SV3.cs" />
+    <Compile Include="Dictionary\Segments\S\SV2.cs" />
+    <Compile Include="Dictionary\Segments\S\SBR.cs" />
+    <Compile Include="Dictionary\Segments\S\SE.cs" />
+    <Compile Include="Dictionary\Segments\S\ST.cs" />
+    <Compile Include="Dictionary\Segments\S\STC.cs" />
+    <Compile Include="Dictionary\Segments\S\SVC.cs" />
+    <Compile Include="Dictionary\Segments\T\TDS.cs" />
+    <Compile Include="Dictionary\Segments\T\TOO.cs" />
+    <Compile Include="Dictionary\Segments\T\TRN.cs" />
+    <Compile Include="Dictionary\Segments\T\TXI.cs" />
+    <Compile Include="Dictionary\Segments\U\UM.cs" />
+    <Compile Include="Dictionary\Segments\V\VEH.cs" />
+    <Compile Include="Dictionary\Segments\SegmentBase.cs" />
+    <Compile Include="Dictionary\Segments\S\SV1.cs" />
+    <Compile Include="Dictionary\Segments\S\SVD.cs" />
+    <Compile Include="Dictionary\Segments\T\TS2.cs" />
+    <Compile Include="Dictionary\Segments\T\TS3.cs" />
+    <Compile Include="Enums\AlignMode.cs" />
+    <Compile Include="Enums\ConverterKind.cs" />
+    <Compile Include="Enums\EDIDelim.cs" />
+    <Compile Include="Enums\EnumHelper.cs" />
+    <Compile Include="Enums\ErrorMode.cs" />
+    <Compile Include="Enums\FixedMode.cs" />
+    <Compile Include="Enums\X12\Gender.cs" />
+    <Compile Include="Enums\MultilineMode.cs" />
+    <Compile Include="Enums\NetLanguage.cs" />
+    <Compile Include="Enums\NetVisibility.cs" />
+    <Compile Include="Enums\ProgressMode.cs" />
+    <Compile Include="Enums\QuoteMode.cs" />
+    <Compile Include="Enums\RecordCondition.cs" />
+    <Compile Include="Enums\TrimMode.cs" />
+    <Compile Include="Enums\X12\CodeList716.cs" />
+    <Compile Include="Enums\X12\YesNo.cs" />
+    <Compile Include="ErrorHandling\BadUsageException.cs" />
+    <Compile Include="ErrorHandling\ConvertException.cs" />
+    <Compile Include="ErrorHandling\ErrorInfo.cs" />
+    <Compile Include="ErrorHandling\FileHelpersException.cs" />
+    <Compile Include="ErrorHandling\RunTimeCompilationException.cs" />
+    <Compile Include="Helpers\AttributeExt.cs" />
+    <Compile Include="Helpers\EnumerationExt.cs" />
+    <Compile Include="Helpers\StringExt.cs" />
+    <Compile Include="Helpers\StringHelper.cs" />
+    <Compile Include="Progress\ProgressChange.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Helpers\ReflectionHelpers.cs" />
+    <Compile Include="Splitter\SplitExt.cs" />
+    <Compile Include="Transformation\Segments.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
